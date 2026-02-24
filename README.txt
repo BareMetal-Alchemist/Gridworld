@@ -1,4 +1,3 @@
-
 README.txt
 
 CPSC 481 – Gridworld BFS

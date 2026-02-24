@@ -23,9 +23,12 @@ neighbors = deque()
 neighbors.append(agent_state) 
 visited = set()
 parent = {}
+nodes_expanded = 0
 
 while len(neighbors) > 0:
     vertex = neighbors.popleft()
+    nodes_expanded += 1
+    
 
     if not vertex in visited:
         visited.add(vertex)
@@ -61,3 +64,10 @@ for i in range (0, len(Gridworld)):
             curr +=1
         print(Gridworld[i][j]," ",  end="")
     print()
+
+
+print("PRINT STATS")
+print("Path length: ", len(final_path) - 1)
+print("Nodes expanded: ", nodes_expanded)
+
+
