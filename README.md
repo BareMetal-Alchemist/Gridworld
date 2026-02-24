@@ -1,15 +1,12 @@
+# CPSC 481 – Gridworld BFS
+### Noah Scott
 
-README.txt
-
-CPSC 481 – Gridworld BFS
-Noah Scott
-
-What is the state representation?
+#### What is the state representation?
 
 The state is represented as a tuple (row, col) corresponding to the agent’s position in the 2D Gridworld.
 Each state uniquely identifies a cell in the grid.
 
-The grid itself is a 2D list where:
+##### The grid itself is a 2D list where:
 
 - "S" = Start
 
@@ -19,7 +16,7 @@ The grid itself is a 2D list where:
 
 - "x" = Wall (blocked cell)
 
-The BFS algorithm explores valid neighboring states (up, down, left, right) that are:
+##### The BFS algorithm explores valid neighboring states (up, down, left, right) that are:
 
 - Within grid bounds
 
@@ -31,7 +28,7 @@ Parent pointers are stored in a dictionary to reconstruct the path once the goal
 
 
 
-Why does BFS guarantee the shortest path in this grid?
+#### Why does BFS guarantee the shortest path in this grid?
 
 Breadth-First Search (BFS) explores nodes level by level, meaning it first explores all states at distance 1 from the start, then distance 2, and so on.
 
@@ -47,7 +44,7 @@ Therefore, BFS guarantees the shortest path in an unweighted grid like this one.
 
 
 
-Results
+#### Results
 
 Path length (number of steps) = 6
 Nodes expanded (number of states processed) = 9
